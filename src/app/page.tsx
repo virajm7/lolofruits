@@ -3,10 +3,10 @@ import { useRef, useState, useEffect } from "react";
 import { supabase } from "../../lib/supabaseClient";
 
 const services = [
-  { video: "/services1.mp4", title: "Fresh Fruit Delivery" },
-  { video: "/services2.mp4", title: "Custom Fruit Baskets" },
-  { video: "/services3.mp4", title: "Corporate Gifting" },
-  { video: "/services4.mp4", title: "Event Catering" }
+  { video: "/services1.mp4", title: "Fresh Fruits" },
+  { video: "/services2.mp4", title: "Tansportation" },
+  { video: "/services3.mp4", title: "Expert Agents" },
+  { video: "/services4.mp4", title: "Cold Storages" }
 ];
 
 // Desktop Navbar (shows on width > 600px)
@@ -368,7 +368,7 @@ export default function Home() {
             textAlign: "center",
             padding: "0 1rem"
           }}>
-            <p style={{ marginBottom: "2rem", fontSize: "1.25rem", maxWidth: 600 }}>
+            <p style={{marginTop:'3rem',marginBottom:'1.5rem', fontSize: "1.25rem", maxWidth: 600 }}>
               Cutting-edge curriculum designed to empower students with the knowledge, skills, and experiences needed to excel in the dynamic field of education.
             </p>
             <button style={{
@@ -567,7 +567,7 @@ export default function Home() {
           }}
         >
           <img
-            src="/about-bg.jpg"
+            src="/aboutbg.jpg"
             alt="About Us background"
             style={{
               position: "absolute",
@@ -577,13 +577,14 @@ export default function Home() {
               height: "100%",
               objectFit: "cover",
               zIndex: 0,
-              opacity: 0.68,
-              filter: "brightness(0.85) blur(1px)",
+              // opacity: 0.68,
+              filter: "brightness(1) blur(1px)",
             }}
           />
           <div
             style={{
-              position: "absolute",
+              position: "static",
+              backgroundColor: "rgba(0, 0, 0, 0.3)",
               top: 0,
               left: 0,
               width: "100%",
@@ -606,8 +607,8 @@ export default function Home() {
             <h2 style={{ fontSize: "2.5rem", fontWeight: 700, marginBottom: "1.2rem", color: "#fff" }}>
               About Us
             </h2>
-            <p style={{ fontSize: "1.22rem", lineHeight: 1.8, marginBottom: 0 }}>
-              At LOLO, we believe in delivering the freshest, highest-quality fruits straight to your doorstep.
+            <p style={{ fontSize: "1.22rem", lineHeight: 1.8, marginBottom: 0, alignContent: "center", color: "#fff" }}>
+              At LOLO, we believe in delivering the freshest, <br />highest-quality fruits straight to your doorstep.
               <br />
               Our passionate team handpicks every selection and crafts unique offerings for individuals, families, and companies.
               <br />
@@ -653,32 +654,110 @@ export default function Home() {
 
         {/* Footer */}
         <footer
-          style={{
-            width: "100%",
-            background: "#1a1a1a",
-            color: "#fff",
-            padding: "2.8rem 1rem 1rem 1rem",
-            marginTop: "2rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center"
-          }}
-        >
-          <div style={{
-            width: "100%",
-            maxWidth: 520,
-            margin: "0 auto"
-          }}>
-            <p style={{
-              textAlign: "center",
-              color: "#bbb",
-              marginTop: "0.5rem",
-              fontSize: "0.96rem"
-            }}>
-              &copy; {new Date().getFullYear()} LOLO. All rights reserved.
-            </p>
-          </div>
-        </footer>
+  style={{
+    width: "100%",
+    background: "#1a1a1a",
+    color: "#fff",
+    padding: "2.8rem 1rem 1rem 1rem",
+    marginTop: "2rem",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <div
+    style={{
+      width: "100%",
+      maxWidth: 520,
+      margin: "0 auto",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "0.7rem"
+    }}
+  >
+    {/* Icons Row */}
+    <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", marginBottom: "0.4rem" }}>
+      {/* Play Store */}
+      <a
+        href="https://play.google.com/store" // Replace with your actual Play Store app link!
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Get the App on Google Play"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <svg width="28" height="28" viewBox="0 0 512 512" fill="none">
+          <path d="M71 27c-10.5 0-18.7 7.6-18.7 18.8v419.2c0 11.2 8.2 18.8 18.7 18.8 3.7 0 7.6-1.2 11.2-3.6l237.6-132.8-54.1-54.1-175.9-266.3C75.1 27.7 73.1 27 71 27zm32.6 18.7L371.1 259.5 103.6 466.3c-2.3 1.6-4.4 2.3-6.6 2.3-5.4 0-9.1-4.1-9.1-10.2V43.9c0-6.2 3.7-10.2 9.1-10.2 2.2 0 4.3 0.7 6.6 2.3zm261.2 214.6l-47.8 26.7 53.6 53.7 87.7 48.8c6.3 3.5 10.8 0.8 10.8-6.2V202c0-7-4.5-9.7-10.8-6.2l-93.5 50.5zm-33.2 61.5l-50.1 28-182.6 101.9c-2.2 1.2-4.2 1.8-6.1 1.8-5.3 0-8.6-4.1-8.6-10.2V441c0 6.1 3.3 10.2 8.6 10.2 1.9 0 3.9-0.6 6.1-1.8l232.8-129.8z" fill="#bbb"/>
+        </svg>
+      </a>
+      {/* Mail */}
+      <a
+        href="mailto:lolobybarkati@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Contact Us"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 8.5l8-6.5V6l-8 6.5L4 6v.5l8 6.5z" fill="#bbb"/>
+        </svg>
+      </a>
+    </div>
+
+    {/* Legal links */}
+    <div style={{ display: "flex", gap: "1.5rem", marginTop: "0.2rem" }}>
+      <a
+        href="/privacy-policy"
+        style={{
+          color: "#bbb",
+          fontSize: "0.96rem",
+          textDecoration: "underline",
+          transition: "color 0.18s",
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Privacy Policy
+      </a>
+      <a
+        href="/terms"
+        style={{
+          color: "#bbb",
+          fontSize: "0.96rem",
+          textDecoration: "underline",
+          transition: "color 0.18s",
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Terms & Conditions
+      </a>
+    </div>
+
+    {/* Copyright */}
+    <p
+      style={{
+        textAlign: "center",
+        color: "#bbb",
+        marginTop: "0.5rem",
+        fontSize: "0.96rem"
+      }}
+    >
+      &copy; {new Date().getFullYear()} LOLO. All rights reserved.
+    </p>
+    <p
+    style={{
+        textAlign: "center",
+        color: "#bbb",
+        marginTop: "0.5rem",
+        fontSize: "0.96rem"
+      }}
+    
+    >Designed By Fusionex</p>
+  </div>
+</footer>
+
+
       </main>
     </>
   );
