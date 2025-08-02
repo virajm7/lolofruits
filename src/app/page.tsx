@@ -1,5 +1,6 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "../../lib/supabaseClient";
 
 const services = [
@@ -260,6 +261,7 @@ function MobileNavbar({ scrolled }: { scrolled: boolean }) {
 }
 
 export default function Home() {
+  const router = useRouter();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -369,6 +371,7 @@ export default function Home() {
             padding: "0 1rem"
           }}>
             <p style={{marginTop:'3rem',marginBottom:'1.5rem', fontSize: "1.25rem", maxWidth: 600 }}>
+              <br /> 
               Cutting-edge curriculum designed to empower students with the knowledge, skills, and experiences needed to excel in the dynamic field of education.
             </p>
             <button style={{
@@ -381,7 +384,26 @@ export default function Home() {
               fontSize: "1rem",
               cursor: "pointer"
             }}>
-              Download App
+              App Coming Soon
+            </button>
+
+            {/* Barkati Fruits page button  */}
+            
+            <button
+              style={{
+                marginTop: "1rem",
+                padding: "0.75rem 2rem",
+                background: "transparent",
+                color: "#ffffff",
+                borderRadius: "9999px",
+                fontWeight: "bold",
+                border: "2px solid #ffffff",
+                fontSize: "1rem",
+                cursor: "pointer"
+              }}
+              onClick={()=> router.push('/barkatifruits')}
+              >
+              Barkati Fruits
             </button>
           </div>
         </section>
@@ -411,7 +433,7 @@ export default function Home() {
             color: "#22223b",
             fontSize: "1.13rem",
             textAlign: "center",
-            maxWidth: 600,
+            maxWidth: 600,  
             marginBottom: "2rem"
           }}>
             Discover our range of premium fruit services tailored for every need—delivered fresh, beautifully presented, and perfect for any occasion.
@@ -757,6 +779,33 @@ export default function Home() {
   </div>
 </footer>
 
+
+        {/* WhatsApp Chat Icon */}
+        <a
+          href="https://wa.me/9321589961" // Replace with your WhatsApp number in international format
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Chat with us on WhatsApp"
+          style={{
+            position: "fixed",
+            bottom: 24,
+            right: 24,
+            zIndex: 100,
+            background: "#25D366",
+            borderRadius: "50%",
+            width: 60,
+            height: 60,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 16px rgba(0,0,0,0.18)",
+            transition: "box-shadow 0.2s",
+          }}
+        >
+          {/* WhatsApp SVG */}
+         <img src="icons/apple.png" alt="WhatsApp Icon" style={{ width: 32, height: 32 }} />
+         
+        </a>
 
       </main>
     </>
