@@ -1,11 +1,28 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const cards = [
   { title: "Imported Fruits", img: "/t4.jpg" },
-  { title: "Fresh Fruits", img: "/t2.jpg" },
-  { title: "Variety Fruits", img: "/t5.jpg" },
-  { title: "Fast Delivery", img: "/t1.jpg" },
+  { title: "Experienced Agents", img: "/t2.jpg" },
+  { title: "Cold Storages", img: "/t5.jpg" },
+  { title: "Transport Service", img: "/t1.jpg" },
+];
+
+const fruitList = [
+  { name: "Apple", img: "/fruits/apple.jpg" },
+  { name: "Apricot", img: "/fruits/apricot.jpg" },
+  { name: "Cherry", img: "/fruits/cherry.jpg" },
+  { name: "Dragon Fruit", img: "/fruits/dragonfruit.jpg" },
+  { name: "Grapes", img: "/fruits/grapes.jpg" },
+  { name: "Kiwi", img: "/fruits/kiwi.jpg" },
+  { name: "Longan", img: "/fruits/longan.jpg" },
+  { name: "Mandarin", img: "/fruits/mandarin.jpg" },
+  { name: "Orange", img: "/fruits/orange.jpg" },
+  { name: "Pears", img: "/fruits/pears.jpg" },
+  { name: "Plum", img: "/fruits/plum.jpg" },
+  { name: "Sweet Tamarind", img: "/fruits/sweet-tamarind.jpg" },
+  { name: "exotic fruits", img: "/fruits/exotic-fruits.jpg" },
 ];
 
 export default function FullScreenHeroVideoWithCardsAndStory() {
@@ -177,6 +194,129 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
         ))}
       </section>
 
+      {/* Fruits Carousel */}
+      <div
+        style={{
+          width: "100%",
+          overflow: "hidden",
+          // margin: "3rem 0 2.5rem 0",
+          background: "transparent",
+          position: "relative",
+        }}
+      >
+        {/* Carousel Title */}
+        <h2
+          style={{
+            textAlign: "center",
+            color: "#184d32",
+            fontWeight: 800,
+            fontSize: "2rem",
+            marginBottom: "1.5rem",
+            letterSpacing: "-0.01em",
+            fontFamily: "'Montserrat', Arial, sans-serif",
+          }}>
+            Imported Fruits
+          </h2>
+        
+        <div className="fruit-carousel-track">
+          {[...fruitList, ...fruitList].map((fruit, idx) => (
+            <div className="fruit-carousel-card" key={idx}>
+              <div className="fruit-img-circle">
+                <Image
+                  src={fruit.img}
+                  alt={fruit.name}
+                  width={110}
+                  height={110}
+                  style={{
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: "3px solid #fff",
+                    boxShadow: "0 2px 8px rgba(34,34,59,0.10)",
+                    background: "#eee",
+                    aspectRatio: "1 / 1", // Ensures perfect circle
+                  }}
+                  priority={idx < fruitList.length}
+                />
+              </div>
+              <div className="fruit-name">{fruit.name}</div>
+            </div>
+          ))}
+        </div>
+        <style>{`
+          .fruit-carousel-track {
+            display: flex;
+            align-items: center;
+            gap: 2.2rem;
+            width: max-content;
+            animation: fruit-scroll 32s linear infinite;
+            will-change: transform;
+          }
+          .fruit-carousel-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 130px;
+          }
+          .fruit-img-circle {
+            width: 116px;
+            height: 116px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.6rem;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.10);
+            padding: 0;
+            overflow: hidden; /* Ensures image stays circular */
+          }
+          .fruit-img-circle img,
+          .fruit-img-circle span > img {
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+            aspect-ratio: 1 / 1 !important;
+            background: #eee;
+            display: block;
+          }
+          .fruit-name {
+            font-size: 1.15rem;
+            color: #184d32;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.01em;
+            margin-top: 0.1rem;
+            white-space: nowrap;
+          }
+          @keyframes fruit-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @media (max-width: 600px) {
+            .fruit-carousel-track {
+              gap: 1.1rem;
+              animation-duration: 18s;
+            }
+            .fruit-img-circle {
+              width: 74px;
+              height: 74px;
+            }
+            .fruit-carousel-card {
+              min-width: 82px;
+            }
+            .fruit-name {
+              font-size: 0.99rem;
+            }
+            .fruit-img-circle img,
+            .fruit-img-circle span > img {
+              width: 70px !important;
+              height: 70px !important;
+            }
+          }
+        `}</style>
+      </div>
+
       {/* Our Story + CTA Section - Horizontally aligned */}
       <section
         className="story-cta-row"
@@ -278,7 +418,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             Contact us now to place your order or learn more about our premium selection!
           </p>
           <a
-            href="https://wa.me/60123456789"
+            href="https://wa.me/+918591456683" // Replace with your actual WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -425,33 +565,108 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
 
       {/* Footer */}
       <footer
-        style={{
-          width: "100%",
-          textAlign: "center",
-          padding: "1.4rem 0 1.2rem 0",
-          background: "transparent",
-          fontSize: "1.05rem",
-          color: "#222",
-          fontWeight: 500,
-          letterSpacing: "0.01em",
-          position: "relative",
-          bottom: 0,
-        }}
+  style={{
+    width: "100%",
+    background: "#1a1a1a",
+    color: "#fff",
+    padding: "2.8rem 1rem 1rem 1rem",
+    marginTop: "2rem",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <div
+    style={{
+      width: "100%",
+      maxWidth: 520,
+      margin: "0 auto",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "0.7rem"
+    }}
+  >
+    {/* Icons Row */}
+    <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", marginBottom: "0.4rem" }}>
+      {/* Play Store */}
+      <a
+        href="https://play.google.com/store" // Replace with your actual Play Store app link!
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Get the App on Google Play"
+        style={{ display: "flex", alignItems: "center" }}
       >
-        <span
-          style={{
-            background: "#fff",
-            borderRadius: "999px",
-            padding: "0.4em 1.3em",
-            boxShadow: "0 2px 8px rgba(34,34,59,0.07)",
-            fontWeight: 600,
-            fontSize: "0.97rem",
-            color: "#222",
-          }}
-        >
-          designed by <span style={{ color: "#25D366" }}>fusionex.labs</span>
-        </span>
-      </footer>
+        <svg width="28" height="28" viewBox="0 0 512 512" fill="none">
+          <path d="M71 27c-10.5 0-18.7 7.6-18.7 18.8v419.2c0 11.2 8.2 18.8 18.7 18.8 3.7 0 7.6-1.2 11.2-3.6l237.6-132.8-54.1-54.1-175.9-266.3C75.1 27.7 73.1 27 71 27zm32.6 18.7L371.1 259.5 103.6 466.3c-2.3 1.6-4.4 2.3-6.6 2.3-5.4 0-9.1-4.1-9.1-10.2V43.9c0-6.2 3.7-10.2 9.1-10.2 2.2 0 4.3 0.7 6.6 2.3zm261.2 214.6l-47.8 26.7 53.6 53.7 87.7 48.8c6.3 3.5 10.8 0.8 10.8-6.2V202c0-7-4.5-9.7-10.8-6.2l-93.5 50.5zm-33.2 61.5l-50.1 28-182.6 101.9c-2.2 1.2-4.2 1.8-6.1 1.8-5.3 0-8.6-4.1-8.6-10.2V441c0 6.1 3.3 10.2 8.6 10.2 1.9 0 3.9-0.6 6.1-1.8l232.8-129.8z" fill="#bbb"/>
+        </svg>
+      </a>
+      {/* Mail */}
+      <a
+        href="mailto:lolobybarkati@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Contact Us"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 8.5l8-6.5V6l-8 6.5L4 6v.5l8 6.5z" fill="#bbb"/>
+        </svg>
+      </a>
+    </div>
+
+    {/* Legal links */}
+    <div style={{ display: "flex", gap: "1.5rem", marginTop: "0.2rem" }}>
+      <a
+        href="/privacy-policy"
+        style={{
+          color: "#bbb",
+          fontSize: "0.96rem",
+          textDecoration: "underline",
+          transition: "color 0.18s",
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Privacy Policy
+      </a>
+      <a
+        href="/terms"
+        style={{
+          color: "#bbb",
+          fontSize: "0.96rem",
+          textDecoration: "underline",
+          transition: "color 0.18s",
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Terms & Conditions
+      </a>
+    </div>
+
+    {/* Copyright */}
+    <p
+      style={{
+        textAlign: "center",
+        color: "#bbb",
+        marginTop: "0.5rem",
+        fontSize: "0.96rem"
+      }}
+    >
+      &copy; {new Date().getFullYear()} LOLO. All rights reserved.
+    </p>,
+    <p
+    style={{
+        textAlign: "center",
+        color: "#bbb",
+        marginTop: "0.5rem",
+        fontSize: "0.96rem"
+      }}
+    
+    >Designed By Fusionex</p>
+  </div>
+</footer>
 
       {/* Responsive & Animation Styles */}
       <style>{`
@@ -530,19 +745,19 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             padding: 1.2rem 0.7rem !important;
           }
           .story-section h2 {
-            font-size: 1.35rem !important;
+            fontSize: 1.35rem !important;
           }
           .story-section p {
-            font-size: 0.99rem !important;
+            fontSize: 0.99rem !important;
           }
           .cta-section {
             padding: 1.2rem 0.7rem !important;
           }
           .cta-section h3 {
-            font-size: 1.2rem !important;
+            fontSize: 1.2rem !important;
           }
           .cta-section p, .cta-section a {
-            font-size: 0.99rem !important;
+            fontSize: 0.99rem !important;
           }
           .personal-sessions-section {
             flex-direction: column !important;
@@ -554,7 +769,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             max-width: 98vw !important;
           }
           footer {
-            font-size: 0.89rem !important;
+            fontSize: 0.89rem !important;
             padding: 1.2rem 0 1.1rem 0 !important;
           }
         }
@@ -565,4 +780,4 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
       `}</style>
     </div>
   );
-} 
+}
