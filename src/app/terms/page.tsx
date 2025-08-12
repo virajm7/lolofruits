@@ -1,9 +1,7 @@
 import React from "react";
 
 const WEBSITE_NAME = "LoloFruits";
-const COMPANY_NAME = "Lolo Barkati Ltd.";
 const CONTACT_EMAIL = "lolobybarkati@gmail.com";
-const COUNTRY = "United States";
 
 export default function Terms() {
   return (
@@ -41,80 +39,138 @@ export default function Terms() {
               wordBreak: "break-word",
             }}
           >
-            Terms and Conditions
+            Terms of Use
           </h1>
-          <p style={{ color: "#888" }}>Last updated: July 2, 2025</p>
+          <div style={{ color: "#888" }}>Last updated: July 2, 2025</div>
         </header>
 
         <section style={{ marginBottom: "1.5rem" }}>
           <p>
-            Welcome to <strong>{WEBSITE_NAME}</strong>! These terms and conditions outline the rules and regulations for using our website.
+            Welcome to Lolo!<br />
+            These Terms of Use (“Terms”) govern your access to and use of the LoloFruits website (<a href="https://lolofruits.com" target="_blank" rel="noopener noreferrer">https://lolofruits.com</a>) and mobile application (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree, you must not use our Service.
           </p>
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>1. Acceptance of Terms</h2>
-          <p>
-            By accessing this website, you accept these terms and conditions. Do not continue to use <strong>{WEBSITE_NAME}</strong> if you do not agree to all of the terms stated on this page.
-          </p>
-        </section>
-
-        <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>2. Use of the Website</h2>
+          <h2 style={sectionTitle}>1. Service Overview</h2>
           <ul style={ulStyle}>
-            <li>You must be at least 13 years old to use this site.</li>
-            <li>You agree not to misuse the website or its services.</li>
-            <li>All content is for your general information and use only. It is subject to change without notice.</li>
+            <li>
+              LoloFruits provides a platform for fruit bulk listings, including cold storage and transportation details.
+            </li>
+            <li>
+              Admin Users can upload fruit listings, images, rate sheets, and other business details.
+            </li>
+            <li>
+              Customer Users can view basic images for free; full details (price, location, quantity, contact information) require a one-time paid subscription.
+            </li>
           </ul>
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>3. Intellectual Property</h2>
-          <p>
-            All content, logos, and graphics on <strong>{WEBSITE_NAME}</strong> are the property of <strong>{COMPANY_NAME}</strong> unless otherwise noted.
-          </p>
+          <h2 style={sectionTitle}>2. Subscription & Payment</h2>
+          <ul style={ulStyle}>
+            <li>
+              The subscription fee is , payable via Google Play Billing or Apple In-App Purchase.
+            </li>
+            <li>
+              Subscription is a one-time payment linked to your account and is non-transferable.
+            </li>
+            <li>
+              No refunds are provided unless required by law or applicable app store policies.
+            </li>
+            <li>
+              Subscription grants continued access to detailed fruit listings for the duration of your account’s validity, unless suspended or terminated under these Terms.
+            </li>
+          </ul>
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>4. User Content</h2>
-          <p>
-            By submitting content (such as comments or uploads), you grant us the right to use, modify, display, and distribute your content as needed to operate the site.
-          </p>
+          <h2 style={sectionTitle}>3. Business Listings & Disclaimers</h2>
+          <ul style={ulStyle}>
+            <li>
+              All business listings (fruit suppliers, cold storage, transportation providers) are uploaded with explicit consent from the respective businesses.
+            </li>
+            <li>
+              Contact details shown are business-only and must not be misused, spammed, or redistributed outside the platform.
+            </li>
+            <li>
+              Rate sheets and pricing information are provided directly by the businesses and are for informational purposes only — rates may change without notice.
+            </li>
+            <li>
+              LoloFruits does not guarantee the accuracy, completeness, or timeliness of business listing information.
+            </li>
+          </ul>
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>5. Limitation of Liability</h2>
-          <p>
-            We do our best to ensure the information on this website is correct, but we do not warrant its completeness or accuracy. Use this website at your own risk.
-          </p>
+          <h2 style={sectionTitle}>4. User Responsibilities</h2>
+          <ul style={ulStyle}>
+            <li>Provide accurate registration and payment information.</li>
+            <li>Use the Service only for lawful purposes.</li>
+            <li>Not copy, distribute, or reproduce any listings, rate sheets, or images without permission.</li>
+            <li>Not attempt to bypass subscription requirements or security features.</li>
+          </ul>
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>6. Governing Law</h2>
-          <p>
-            These terms are governed by and construed in accordance with the laws of {COUNTRY}.
-          </p>
+          <h2 style={sectionTitle}>5. Intellectual Property</h2>
+          <ul style={ulStyle}>
+            <li>
+              All content within the Service, including images, rate sheets, and software, is owned by LoloFruits or its licensors.
+            </li>
+            <li>
+              You are granted a limited, non-exclusive, non-transferable license to access the Service for personal, non-commercial use.
+            </li>
+          </ul>
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>7. Changes to Terms</h2>
-          <p>
-            We reserve the right to update these terms at any time. Changes will be posted on this page.
-          </p>
+          <h2 style={sectionTitle}>6. Limitation of Liability</h2>
+          <ul style={ulStyle}>
+            <li>
+              LoloFruits is not responsible for business transaction disputes, product quality, delivery issues, or any damages resulting from reliance on listing information.
+            </li>
+            <li>
+              The Service is provided “as is” without warranties of any kind, express or implied.
+            </li>
+          </ul>
         </section>
 
-        <footer style={{ marginTop: "2rem", color: "#666" }}>
-          <p>
-            If you have any questions about these Terms and Conditions, please contact us at{" "}
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              style={{ color: "#309f4c", wordBreak: "break-all" }}
-            >
-              {CONTACT_EMAIL}
-            </a>
-            .
-          </p>
-        </footer>
+        <section style={{ marginBottom: "1.5rem" }}>
+          <h2 style={sectionTitle}>7. Termination</h2>
+          <ul style={ulStyle}>
+            <li>You violate these Terms or applicable laws.</li>
+            <li>You misuse business contact information.</li>
+            <li>You engage in fraudulent activities or attempt to bypass payment.</li>
+            <li>
+              Upon termination, your access to subscription benefits will end immediately without refund.
+            </li>
+          </ul>
+        </section>
+
+        <section style={{ marginBottom: "1.5rem" }}>
+          <h2 style={sectionTitle}>9. Changes to Terms</h2>
+          <ul style={ulStyle}>
+            <li>
+              We may update these Terms from time to time. Updates will be effective once posted within the Service with the “Last updated” date revised.
+            </li>
+          </ul>
+        </section>
+
+        <section style={{ marginBottom: "1.5rem" }}>
+          <h2 style={sectionTitle}>10. Contact Us</h2>
+          <ul style={ulStyle}>
+            <li>
+              If you have any questions about these Terms, please contact us:<br />
+              📧 <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                style={{ color: "#309f4c", wordBreak: "break-all" }}
+              >
+                {CONTACT_EMAIL}
+              </a>
+            </li>
+          </ul>
+        </section>
       </section>
       <style>{`
         @media (max-width: 900px) {
