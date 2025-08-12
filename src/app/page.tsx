@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, useEffect, } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { supabase } from "../../lib/supabaseClient";
 
@@ -588,7 +589,7 @@ export default function Home() {
             overflow: "hidden",
           }}
         >
-          <img
+          <Image
             src="/aboutbg.jpg"
             alt="About Us background"
             style={{
@@ -803,7 +804,7 @@ export default function Home() {
           }}
         >
           {/* WhatsApp SVG */}
-         <img src="icons/apple.png" alt="WhatsApp Icon" style={{ width: 32, height: 32 }} />
+         <Image src="icons/apple.png" alt="WhatsApp Icon" style={{ width: 32, height: 32 }} />
          
         </a>
 
@@ -960,7 +961,7 @@ function ContactForm() {
         {loading ? "Submitting..." : "Submit"}
       </button>
       {success && (
-        <div style={{ color: "green", marginTop: 10 }}>Thank you! We'll contact you soon.</div>
+        <div style={{ color: "green", marginTop: 10 }}>Thank you! We&apos;ll contact you soon.</div>
       )}
       {error && (
         <div style={{ color: "red", marginTop: 10 }}>{error}</div>

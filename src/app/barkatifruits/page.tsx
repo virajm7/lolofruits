@@ -168,7 +168,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
               transition: "box-shadow 0.2s",
             }}
           >
-            <img
+            <Image
               src={card.img}
               alt={card.title}
               style={{

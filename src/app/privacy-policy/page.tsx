@@ -49,11 +49,11 @@ export default function Privacy() {
 
         <section style={{ marginBottom: "1.5rem" }}>
           <p>
-            <strong>{WEBSITE_NAME}</strong> ("we", "us", or "our") operates the{" "}
+            <strong>{WEBSITE_NAME}</strong> (&quot;we, &quot;us, or &quot;our) operates the{" "}
             <a href={WEBSITE_URL} style={{ color: "#309f4c" }}>
               {WEBSITE_URL}
             </a>{" "}
-            website (the "Service").
+            website (the &quot;Services).
           </p>
         </section>
 
@@ -143,7 +143,7 @@ export default function Privacy() {
         </section>
 
         <section style={{ marginBottom: "1.5rem" }}>
-          <h2 style={sectionTitle}>8. Children's Privacy</h2>
+          <h2 style={sectionTitle}>8. Children&apos;s Privacy</h2>
           <p>
             Our website is not intended for children under the age of 13. We do
             not knowingly collect personal information from children under 13.

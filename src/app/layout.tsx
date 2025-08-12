@@ -1,6 +1,6 @@
 import './globals.css'
 import type { ReactNode } from 'react'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 // import AnimatedLogo from '../components/animatedlogo' // Import the animated logo
 
 export const metadata = {

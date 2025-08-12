@@ -1,6 +1,7 @@
 import React from "react";
 
 const WEBSITE_NAME = "LoloFruits";
+const WEBSITE_URL = "https://lolofruits.com";
 const CONTACT_EMAIL = "lolobybarkati@gmail.com";
 
 export default function Terms() {
@@ -47,7 +48,14 @@ export default function Terms() {
         <section style={{ marginBottom: "1.5rem" }}>
           <p>
             Welcome to Lolo!<br />
-            These Terms of Use (“Terms”) govern your access to and use of the LoloFruits website (<a href="https://lolofruits.com" target="_blank" rel="noopener noreferrer">https://lolofruits.com</a>) and mobile application (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree, you must not use our Service.
+            <p>
+            <strong>{WEBSITE_NAME}</strong> (&quot;we, &quot;us, or &quot;our) operates the{" "}
+            <a href={WEBSITE_URL} style={{ color: "#309f4c" }}>
+              {WEBSITE_URL}
+            </a>{" "}
+            website (the &quot;Services).
+          </p>
+            These Terms of Use (&quot;Terms&quot;) govern your access to and use of the LoloFruits website (<a href="https://lolofruits.com" target="_blank" rel="noopener noreferrer">https://lolofruits.com</a>) and mobile application (collectively, the &quot;Service&quot;). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree, you must not use our Service.
           </p>
         </section>
 
@@ -131,7 +139,7 @@ export default function Terms() {
               LoloFruits is not responsible for business transaction disputes, product quality, delivery issues, or any damages resulting from reliance on listing information.
             </li>
             <li>
-              The Service is provided “as is” without warranties of any kind, express or implied.
+              The Service is provided &quot;as is&quot; without warranties of any kind, express or implied.
             </li>
           </ul>
         </section>
