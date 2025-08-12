@@ -21,8 +21,8 @@ const fruitList = [
   { name: "Orange", img: "/fruits/orange.jpg" },
   { name: "Pears", img: "/fruits/pears.jpg" },
   { name: "Plum", img: "/fruits/plum.jpg" },
-  { name: "Sweet Tamarind", img: "/fruits/sweet-tamarind.jpg" },
-  { name: "exotic fruits", img: "/fruits/exotic-fruits.jpg" },
+  { name: "Sweet Tamarind", img: "/fruits/sweettamarind.jpg" },
+  { name: "exotic fruits", img: "/fruits/exoticfruits.jpg" },
 ];
 
 export default function FullScreenHeroVideoWithCardsAndStory() {
@@ -332,56 +332,9 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
           flexWrap: "wrap",
         }}
       >
-        {/* Our Story Section */}
+        {/* Our Story Card */}
         <div
-          ref={storyRef}
           className="story-section"
-          style={{
-            flex: 1,
-            minWidth: 280,
-            maxWidth: 700,
-            textAlign: "center",
-            opacity: 0,
-            transform: "translateY(32px)",
-            transition:
-              "opacity 0.8s cubic-bezier(.77,.2,.23,1), transform 0.8s cubic-bezier(.77,.2,.23,1)",
-            background: "#111",
-            borderRadius: "16px",
-            padding: "2.2rem 1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: 800,
-              marginBottom: "1rem",
-              letterSpacing: "-0.02em",
-              color: "#fff",
-              fontFamily: "'Montserrat', Arial, sans-serif",
-            }}
-          >
-            Our Story
-          </h2>
-          <p
-            style={{
-              fontSize: "1.17rem",
-              color: "#fff",
-              fontWeight: 500,
-              lineHeight: 1.7,
-              margin: 0,
-              fontFamily: "'Montserrat', Arial, sans-serif",
-            }}
-          >
-            Barkati Fruits began with a simple vision: to deliver the freshest produce with a commitment to quality and tradition. Today, we continue our journey by sharing a passion for exceptional fruits, bringing health and happiness to every home.
-          </p>
-        </div>
-
-        {/* CTA Section */}
-        <div
-          className="cta-section"
           style={{
             flex: 1,
             minWidth: 240,
@@ -389,7 +342,46 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            background: "#25D366",
+            background: "#a9466a",
+            borderRadius: "14px",
+            padding: "2rem 1.5rem",
+            boxShadow: "0 2px 12px rgba(34,34,59,0.10)",
+            justifyContent: "center",
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          <h3
+            style={{
+              fontWeight: 700,
+              fontSize: "1.7rem",
+              marginBottom: "0.7rem",
+              color: "#fff",
+            }}
+          >
+            Our Story
+          </h3>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              marginBottom: "0",
+              color: "#fff",
+            }}
+          >
+            Barkati Fruits began with a simple vision: to deliver the freshest produce with a commitment to quality and tradition. Today, we continue our journey by sharing a passion for exceptional fruits, bringing health and happiness to every home.
+          </p>
+        </div>
+        {/* CTA Section */}
+        <div
+          className="cta-section"
+          style={{
+            flex: 1,
+            minWidth: 240,
+            maxWidth: 540,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            background: "#893f3f",
             borderRadius: "14px",
             padding: "2rem 1.5rem",
             boxShadow: "0 2px 12px rgba(34,34,59,0.10)",
@@ -405,7 +397,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
               textAlign: "center",
             }}
           >
-            Ready to experience the best fruits?
+            Still have Questions ?
           </h3>
           <p
             style={{
@@ -423,7 +415,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             rel="noopener noreferrer"
             style={{
               background: "#fff",
-              color: "#25D366",
+              color: "#893f3f",
               fontWeight: 700,
               fontSize: "1.1rem",
               borderRadius: "999px",
@@ -436,7 +428,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
               cursor: "pointer",
             }}
           >
-            Order on WhatsApp
+            Enquire More !
           </a>
         </div>
       </section>
@@ -452,13 +444,13 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
           flexDirection: "row",
           gap: "2rem",
           alignItems: "center",
-          background: "#f5eee6",
+          background: "#c6bd85",
           borderRadius: "16px",
           boxShadow: "0 2px 12px rgba(34,34,59,0.10)",
           flexWrap: "wrap",
         }}
       >
-        {/* Image Area */}
+        {/* Stats Area */}
         <div
           style={{
             flex: 1,
@@ -469,16 +461,6 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             justifyContent: "center",
           }}
         >
-          {/* <img
-            src="/personal-session.jpg"
-            alt="Personal Sessions"
-            style={{
-              width: "100%",
-              maxWidth: "400px",
-              borderRadius: "12px",
-              marginBottom: "1.5rem",
-            }}
-          /> */}
           <div
             style={{
               display: "flex",
@@ -495,16 +477,16 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             }}
           >
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontWeight: 700, fontSize: "1.7rem", color: "#222" }}>98%</div>
-              <div style={{ fontSize: "0.97rem", color: "#555" }}>Time to time<br />schedule</div>
+              <div style={{ fontWeight: 700, fontSize: "1.7rem", color: "#222" }}>4+</div>
+              <div style={{ fontSize: "0.97rem", color: "#555" }}>Years of<br />Experience</div>
             </div>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontWeight: 700, fontSize: "1.7rem", color: "#222" }}>750</div>
-              <div style={{ fontSize: "0.97rem", color: "#555" }}>24/7 Online<br />Support</div>
+              <div style={{ fontWeight: 700, fontSize: "1.7rem", color: "#222" }}>15+</div>
+              <div style={{ fontSize: "0.97rem", color: "#555" }}>Countries<br />Imported From</div>
             </div>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontWeight: 700, fontSize: "1.7rem", color: "#222" }}>20+</div>
-              <div style={{ fontSize: "0.97rem", color: "#555" }}>Man to<br />Optimize</div>
+              <div style={{ fontWeight: 700, fontSize: "1.7rem", color: "#222" }}>India</div>
+              <div style={{ fontSize: "0.97rem", color: "#555" }}>Serving<br />Pan India</div>
             </div>
           </div>
         </div>
@@ -522,7 +504,6 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
           }}
         >
           <br />
-          {/* <div style={{ fontWeight: 600, color: "#222", fontSize: "1.08rem", marginBottom: "0.5rem" }}>Personal Sessions</div> */}
           <div style={{
             fontSize: "2rem",
             fontWeight: 800,
@@ -530,7 +511,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             color: "#222",
             lineHeight: 1.1,
           }}>
-            Transform Your Life &<br />Live Your Dream
+            Years of Experience &<br />Global Fruit Import
           </div>
           <div style={{
             fontSize: "1.07rem",
@@ -539,11 +520,11 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             lineHeight: 1.7,
             marginBottom: "1.3rem"
           }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+            With over 4+ years in the fruit market, we import premium fruits from more than 15 countries, delivering freshness and quality across India.
           </div>
           <button
             style={{
-              background: "#FF6A30",
+              background: "#504935",
               color: "#fff",
               fontWeight: 700,
               fontSize: "1.1rem",
@@ -556,6 +537,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
               outline: "none",
               cursor: "pointer"
             }}
+            disabled
           >
             +91 98765432114
           </button>
@@ -563,110 +545,125 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
         </div>
       </section>
 
+      {/* Fruitful Day Title */}
+      <div
+        style={{
+          textAlign: "center",
+          color: "#c6bd85",
+          fontSize: "2rem",
+          fontWeight: 700,
+          margin: "2.5rem 0 0.5rem 0",
+          fontFamily: "'Montserrat', Arial, sans-serif",
+          letterSpacing: "0.01em",
+        }}
+      >
+        Wishing you a FruitFull Day!
+      </div>
+
       {/* Footer */}
       <footer
-  style={{
-    width: "100%",
-    background: "#1a1a1a",
-    color: "#fff",
-    padding: "2.8rem 1rem 1rem 1rem",
-    marginTop: "2rem",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  }}
->
-  <div
-    style={{
-      width: "100%",
-      maxWidth: 520,
-      margin: "0 auto",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: "0.7rem"
-    }}
-  >
-    {/* Icons Row */}
-    <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", marginBottom: "0.4rem" }}>
-      {/* Play Store */}
-      <a
-        href="https://play.google.com/store" // Replace with your actual Play Store app link!
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Get the App on Google Play"
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        <svg width="28" height="28" viewBox="0 0 512 512" fill="none">
-          <path d="M71 27c-10.5 0-18.7 7.6-18.7 18.8v419.2c0 11.2 8.2 18.8 18.7 18.8 3.7 0 7.6-1.2 11.2-3.6l237.6-132.8-54.1-54.1-175.9-266.3C75.1 27.7 73.1 27 71 27zm32.6 18.7L371.1 259.5 103.6 466.3c-2.3 1.6-4.4 2.3-6.6 2.3-5.4 0-9.1-4.1-9.1-10.2V43.9c0-6.2 3.7-10.2 9.1-10.2 2.2 0 4.3 0.7 6.6 2.3zm261.2 214.6l-47.8 26.7 53.6 53.7 87.7 48.8c6.3 3.5 10.8 0.8 10.8-6.2V202c0-7-4.5-9.7-10.8-6.2l-93.5 50.5zm-33.2 61.5l-50.1 28-182.6 101.9c-2.2 1.2-4.2 1.8-6.1 1.8-5.3 0-8.6-4.1-8.6-10.2V441c0 6.1 3.3 10.2 8.6 10.2 1.9 0 3.9-0.6 6.1-1.8l232.8-129.8z" fill="#bbb"/>
-        </svg>
-      </a>
-      {/* Mail */}
-      <a
-        href="mailto:lolobybarkati@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Contact Us"
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 8.5l8-6.5V6l-8 6.5L4 6v.5l8 6.5z" fill="#bbb"/>
-        </svg>
-      </a>
-    </div>
-
-    {/* Legal links */}
-    <div style={{ display: "flex", gap: "1.5rem", marginTop: "0.2rem" }}>
-      <a
-        href="/privacy-policy"
         style={{
-          color: "#bbb",
-          fontSize: "0.96rem",
-          textDecoration: "underline",
-          transition: "color 0.18s",
+          width: "100%",
+          background: "#1a1a1a",
+          color: "#fff",
+          padding: "2.8rem 1rem 1rem 1rem",
+          marginTop: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
-        target="_blank"
-        rel="noopener noreferrer"
       >
-        Privacy Policy
-      </a>
-      <a
-        href="/terms"
-        style={{
-          color: "#bbb",
-          fontSize: "0.96rem",
-          textDecoration: "underline",
-          transition: "color 0.18s",
-        }}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Terms & Conditions
-      </a>
-    </div>
+        <div
+          style={{
+            width: "100%",
+            maxWidth: 520,
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "0.7rem"
+          }}
+        >
+          {/* Icons Row */}
+          <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", marginBottom: "0.4rem" }}>
+            {/* Play Store */}
+            <a
+              href="https://play.google.com/store" // Replace with your actual Play Store app link!
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Get the App on Google Play"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <svg width="28" height="28" viewBox="0 0 512 512" fill="none">
+                <path d="M71 27c-10.5 0-18.7 7.6-18.7 18.8v419.2c0 11.2 8.2 18.8 18.7 18.8 3.7 0 7.6-1.2 11.2-3.6l237.6-132.8-54.1-54.1-175.9-266.3C75.1 27.7 73.1 27 71 27zm32.6 18.7L371.1 259.5 103.6 466.3c-2.3 1.6-4.4 2.3-6.6 2.3-5.4 0-9.1-4.1-9.1-10.2V43.9c0-6.2 3.7-10.2 9.1-10.2 2.2 0 4.3 0.7 6.6 2.3zm261.2 214.6l-47.8 26.7 53.6 53.7 87.7 48.8c6.3 3.5 10.8 0.8 10.8-6.2V202c0-7-4.5-9.7-10.8-6.2l-93.5 50.5zm-33.2 61.5l-50.1 28-182.6 101.9c-2.2 1.2-4.2 1.8-6.1 1.8-5.3 0-8.6-4.1-8.6-10.2V441c0 6.1 3.3 10.2 8.6 10.2 1.9 0 3.9-0.6 6.1-1.8l232.8-129.8z" fill="#bbb"/>
+              </svg>
+            </a>
+            {/* Mail */}
+            <a
+              href="mailto:lolobybarkati@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Contact Us"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 8.5l8-6.5V6l-8 6.5L4 6v.5l8 6.5z" fill="#bbb"/>
+              </svg>
+            </a>
+          </div>
 
-    {/* Copyright */}
-    <p
-      style={{
-        textAlign: "center",
-        color: "#bbb",
-        marginTop: "0.5rem",
-        fontSize: "0.96rem"
-      }}
-    >
-      &copy; {new Date().getFullYear()} LOLO. All rights reserved.
-    </p>,
-    <p
-    style={{
-        textAlign: "center",
-        color: "#bbb",
-        marginTop: "0.5rem",
-        fontSize: "0.96rem"
-      }}
-    
-    >Designed By Fusionex</p>
-  </div>
-</footer>
+          {/* Legal links */}
+          <div style={{ display: "flex", gap: "1.5rem", marginTop: "0.2rem" }}>
+            <a
+              href="/privacy-policy"
+              style={{
+                color: "#bbb",
+                fontSize: "0.96rem",
+                textDecoration: "underline",
+                transition: "color 0.18s",
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms"
+              style={{
+                color: "#bbb",
+                fontSize: "0.96rem",
+                textDecoration: "underline",
+                transition: "color 0.18s",
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Terms & Conditions
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <p
+            style={{
+              textAlign: "center",
+              color: "#bbb",
+              marginTop: "0.5rem",
+              fontSize: "0.96rem"
+            }}
+          >
+            &copy; {new Date().getFullYear()} LOLO. All rights reserved.
+          </p>,
+          <p
+            style={{
+              textAlign: "center",
+              color: "#bbb",
+              marginTop: "0.5rem",
+              fontSize: "0.96rem"
+            }}
+          
+          >Designed By Fusionex</p>
+        </div>
+      </footer>
 
       {/* Responsive & Animation Styles */}
       <style>{`
