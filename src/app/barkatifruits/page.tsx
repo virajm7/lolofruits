@@ -171,6 +171,8 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             <Image
               src={card.img}
               alt={card.title}
+              width={400}
+              height={220}
               style={{
                 width: "100%",
                 height: "180px",
@@ -243,6 +245,10 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
           ))}
         </div>
         <style>{`
+        html, body {
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
           .fruit-carousel-track {
             display: flex;
             align-items: center;
@@ -251,6 +257,14 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             animation: fruit-scroll 32s linear infinite;
             will-change: transform;
           }
+            /* Hide horizontal scrollbar for carousel container */
+        .fruit-carousel-track::-webkit-scrollbar {
+          display: none;
+        }
+          .fruit-carousel-track {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
           .fruit-carousel-card {
             display: flex;
             flex-direction: column;
@@ -371,7 +385,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             Barkati Fruits began with a simple vision: to deliver the freshest produce with a commitment to quality and tradition. Today, we continue our journey by sharing a passion for exceptional fruits, bringing health and happiness to every home.
           </p>
         </div>
-        {/* CTA Section */}
+        {/* CTA Section and whatsapp */}
         <div
           className="cta-section"
           style={{
@@ -409,6 +423,8 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
           >
             Contact us now to place your order or learn more about our premium selection!
           </p>
+
+          {/* Whatsapp icon */}
           <a
             href="https://wa.me/+918591456683" // Replace with your actual WhatsApp number
             target="_blank"
@@ -428,7 +444,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
               cursor: "pointer",
             }}
           >
-            Enquire More !
+            Enquire More
           </a>
         </div>
       </section>
@@ -557,7 +573,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
           letterSpacing: "0.01em",
         }}
       >
-        Wishing you a FruitFull Day!
+        Wishing you a FruitFul Day!
       </div>
 
       {/* Footer */}
@@ -652,7 +668,7 @@ export default function FullScreenHeroVideoWithCardsAndStory() {
             }}
           >
             &copy; {new Date().getFullYear()} LOLO. All rights reserved.
-          </p>,
+          </p>
           <p
             style={{
               textAlign: "center",

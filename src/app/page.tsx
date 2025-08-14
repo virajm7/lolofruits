@@ -11,6 +11,9 @@ const services = [
   { video: "/services4.mp4", title: "Cold Storages" }
 ];
 
+
+
+
 // Desktop Navbar (shows on width > 600px)
 function DesktopNavbar({ scrolled }: { scrolled: boolean }) {
   const navLinkColor = scrolled ? "#000" : "#fff";
@@ -73,7 +76,7 @@ function DesktopNavbar({ scrolled }: { scrolled: boolean }) {
           position: "relative",
           padding: "0.25rem 0.5rem",
           transition: "color 0.2s"
-        }}>Contact</a>
+        }}>Contact Us</a>
       </div>
       <style jsx>{`
         @media (max-width: 600px) {
@@ -576,104 +579,429 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section
-          id="about"
-          style={{
-            position: "relative",
-            minHeight: "70vh",
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            overflow: "hidden",
-          }}
-        >
-          <Image
-            src="/aboutbg.jpg"
-            alt="About Us background"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: 0,
-              // opacity: 0.68,
-              filter: "brightness(1) blur(1px)",
-            }}
-          />
+<section
+  id="about"
+  style={{
+    position: "relative",
+    minHeight: "80vh",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+    overflow: "hidden",
+  }}
+>
+  {/* Background (updated image) */}
+  <Image
+    src="/about.jpg" // <-- put your new image at /public/about.jpg
+    alt="LOLO wholesale fruit marketplace"
+    width={1920}
+    height={1080}
+    priority
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      zIndex: 0,
+      filter: "brightness(0.85) saturate(1.1) blur(0.5px)",
+    }}
+  />
+
+  {/* Dark gradient overlay */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(180deg, rgba(0,0,0,0.55) 10%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.6) 100%)",
+      zIndex: 1,
+    }}
+  />
+
+  {/* Decorative glows */}
+  <div
+    style={{
+      position: "absolute",
+      top: "-120px",
+      right: "-120px",
+      width: "300px",
+      height: "300px",
+      background: "radial-gradient(closest-side, rgba(255,165,0,0.35), transparent 70%)",
+      filter: "blur(8px)",
+      zIndex: 1,
+      pointerEvents: "none",
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      bottom: "-140px",
+      left: "-140px",
+      width: "340px",
+      height: "340px",
+      background: "radial-gradient(closest-side, rgba(144,238,144,0.35), transparent 70%)",
+      filter: "blur(10px)",
+      zIndex: 1,
+      pointerEvents: "none",
+    }}
+  />
+
+  {/* Content card */}
+  <div
+    style={{
+      position: "relative",
+      zIndex: 2,
+      maxWidth: 980,
+      width: "100%",
+      margin: "0 auto",
+      padding: "2rem 1.25rem",
+    }}
+  >
+    <div
+      style={{
+        margin: "0 auto",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.06))",
+        border: "1px solid rgba(255,255,255,0.18)",
+        borderRadius: 20,
+        padding: "2rem",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
+      }}
+    >
+      {/* Label chip */}
+      <div
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 8,
+          padding: "6px 10px",
+          borderRadius: 999,
+          background: "rgba(255,255,255,0.12)",
+          border: "1px solid rgba(255,255,255,0.18)",
+          fontSize: 12,
+          fontWeight: 700,
+          letterSpacing: 0.2,
+        }}
+      >
+        🌍 Imported • 🧊 Cold-Chain • 🚚 Logistics
+      </div>
+
+      <h2
+        style={{
+          fontSize: "2.25rem",
+          lineHeight: 1.15,
+          fontWeight: 800,
+          marginTop: "1rem",
+          marginBottom: "0.75rem",
+          textShadow: "0 2px 16px rgba(0,0,0,0.35)",
+        }}
+      >
+        LOLO — Wholesale Fruit Marketplace App
+      </h2>
+
+      <p
+        style={{
+          fontSize: "1.05rem",
+          lineHeight: 1.8,
+          opacity: 0.95,
+          marginBottom: "1.25rem",
+          maxWidth: 820,
+        }}
+      >
+        LOLO lists <strong>imported fruits from across the world</strong> for wholesale buyers. 
+        Browse live listings in the app, compare varieties and grades, and connect directly with suppliers. 
+        Beyond sourcing, LOLO helps you complete the supply chain with <strong>transportation</strong>, 
+        <strong> cold storages</strong>, and on-ground <strong>market agents</strong> who bring real trading experience.
+        Everything you need to move fresh produce—organized in one place.
+      </p>
+
+      {/* Feature grid (updated for wholesale focus) */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "10px",
+          marginTop: "1rem",
+        }}
+      >
+        {[
+          ["🌐 Global imports", "Sourced across seasons & origins"],
+          ["📱 App-first listings", "Grades, pack types, live availability"],
+          ["🚛 Transportation", "End-to-end freight & last-mile"],
+          ["🧊 Cold storages", "Chilled handling & holding"],
+          ["🤝 Market agents", "Experienced execution & negotiation"],
+          ["📦 Wholesale focus", "Bulk orders, RFQs, better pricing"],
+        ].map(([title, sub]) => (
           <div
+            key={title}
             style={{
-              position: "static",
-              backgroundColor: "rgba(0, 0, 0, 0.3)",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              background: "linear-gradient(90deg, rgba(30,30,30,0.4) 0%, rgba(60,60,60,0.2) 100%)",
-              zIndex: 1,
-            }}
-          />
-          <div
-            style={{
-              position: "relative",
-              zIndex: 2,
-              maxWidth: 640,
-              padding: "3.5rem 1.2rem",
-              textAlign: "center",
-              margin: "auto",
-              backdropFilter: "blur(0.5px)",
+              display: "flex",
+              gap: 12,
+              alignItems: "flex-start",
+              padding: "12px 14px",
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.18)",
+              borderRadius: 14,
             }}
           >
-            <h2 style={{ fontSize: "2.5rem", fontWeight: 700, marginBottom: "1.2rem", color: "#fff" }}>
-              About Us
-            </h2>
-            <p style={{ fontSize: "1.22rem", lineHeight: 1.8, marginBottom: 0, alignContent: "center", color: "#fff" }}>
-              At LOLO, we believe in delivering the freshest, <br />highest-quality fruits straight to your doorstep.
-              <br />
-              Our passionate team handpicks every selection and crafts unique offerings for individuals, families, and companies.
-              <br />
-              With years of experience, trusted partners, and a love for healthy living, we’re proud to make nature’s best accessible to everyone.
-              <br />
-              <strong>LOLO – Where every basket is a promise of taste, wellness, and delight.</strong>
-            </p>
+            <div style={{ fontSize: 20, lineHeight: 1 }}>{title.split(" ")[0]}</div>
+            <div>
+              <div style={{ fontWeight: 700 }}>{title.replace(/^[^\s]+ /, "")}</div>
+              <div style={{ fontSize: 12, opacity: 0.85 }}>{sub}</div>
+            </div>
           </div>
-        </section>
+        ))}
+      </div>
+
+      {/* Stats + CTAs (unchanged) */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: 16,
+          marginTop: 24,
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, minmax(0,1fr))",
+            gap: 12,
+          }}
+        >
+          {[
+            ["4+", "Years of trust"],
+            ["50+", " Clients across India"],
+            ["100+", "Products listed"],
+            ["10+", "Cold storages"],
+          ].map(([num, label]) => (
+            <div
+              key={label}
+              style={{
+                textAlign: "center",
+                background: "rgba(255,255,255,0.08)",
+                border: "1px solid rgba(255,255,255,0.18)",
+                borderRadius: 14,
+                padding: "14px 10px",
+              }}
+            >
+              <div style={{ fontSize: "1.4rem", fontWeight: 800 }}>{num}</div>
+              <div style={{ fontSize: 12, opacity: 0.85 }}>{label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 6 }}>
+          
+          <a
+            href="https://wa.me/+918591456683"
+            style={{
+              background: "#00cc1bff",
+              color: "#fff",
+              padding: "12px 18px",
+              borderRadius: 12,
+              fontWeight: 700,
+              textDecoration: "none",
+              border: "1px solid rgba(255,255,255,0.18)",
+            }}
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      {/* Fine print */}
+      <div style={{ marginTop: 10, fontSize: 11, opacity: 0.7 }}>
+        *Services vary by Route, Company and inventory. Contact us for current availability.
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
         {/* Contact Section */}
-        <section
-          id="contact"
+<section
+  id="contact"
+  style={{
+    position: "relative",
+    minHeight: "70vh",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#184d32",
+    background: "linear-gradient(135deg, #f6fff9 0%, #ffffff 100%)",
+    overflow: "hidden",
+  }}
+>
+  {/* Decorative shapes */}
+  <div
+    style={{
+      position: "absolute",
+      top: "-50px",
+      left: "-50px",
+      width: "300px",
+      height: "300px",
+      background: "radial-gradient(circle at center, rgba(80,200,120,0.2), transparent 70%)",
+      filter: "blur(30px)",
+      zIndex: 1,
+      pointerEvents: "none",
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      bottom: "-60px",
+      right: "-60px",
+      width: "320px",
+      height: "320px",
+      background: "radial-gradient(circle at center, rgba(255,200,80,0.2), transparent 70%)",
+      filter: "blur(35px)",
+      zIndex: 1,
+      pointerEvents: "none",
+    }}
+  />
+
+  {/* Contact container */}
+  <div
+    style={{
+      position: "relative",
+      zIndex: 2,
+      maxWidth: 900,
+      width: "100%",
+      margin: "auto",
+      padding: "3.5rem 1.5rem",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "2rem",
+    }}
+  >
+    {/* Section heading */}
+    <div style={{ textAlign: "center", maxWidth: 700 }}>
+      <h2 style={{ fontSize: "2.4rem", fontWeight: 800, marginBottom: "0.5rem", color: "#184d32" }}>
+        Get in Touch
+      </h2>
+      <p style={{ fontSize: "1rem", color: "#2d6a4f", lineHeight: 1.6 }}>
+        Have a question about wholesale fruit sourcing, transportation, cold storage, or our app?<br />
+        Our team is here to help you every step of the way.
+      </p>
+    </div>
+
+    {/* Contact form card */}
+    <div
+  style={{
+    position: "relative",
+    width: "100%",
+    borderRadius: 22,
+    // gradient border via padding + inner card
+    background:
+      "linear-gradient(135deg, #b7f7cc 0%, #facc15 60%, #f59e0b 100%)",
+    padding: 1,
+    boxShadow: "0 14px 40px rgba(0,0,0,0.08)",
+  }}
+>
+  <div
+    style={{
+      background: "#fff",
+      borderRadius: 21,
+      padding: "1.25rem",
+      // subtle dotted pattern so it’s not just flat white
+      backgroundImage:
+        "radial-gradient(rgba(24,77,50,0.06) 1px, transparent 1.25px)",
+      backgroundSize: "20px 20px",
+      border: "1px solid rgba(0,0,0,0.06)",
+    }}
+  >
+    {/* Small header row (optional, keeps things lively) */}
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: 8,
+        marginBottom: "0.75rem",
+      }}
+    >
+      <div>
+        <div
           style={{
-            position: "relative",
-            minHeight: "70vh",
-            width: "100%",
-            display: "flex",
+            display: "inline-flex",
             alignItems: "center",
-            justifyContent: "center",
+            gap: 8,
+            padding: "6px 10px",
+            borderRadius: 999,
+            background: "rgba(24,77,50,0.06)",
+            border: "1px solid rgba(24,77,50,0.18)",
             color: "#184d32",
-            background: "#fff",
-            overflow: "hidden",
+            fontWeight: 700,
+            fontSize: 12,
+            letterSpacing: "0.02em",
           }}
         >
-          <div
+          🌍 Wholesale inquiries welcome
+        </div>
+       
+      </div>
+
+      {/* Quick contact chips */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        {[
+          ["📞", "Call", "tel:+918591456683"],
+          ["💬", "WhatsApp", "https://wa.me/+918591456683"],
+          ["✉️", "Email", "mailto:lolobybarkati@gmail.com"],
+        ].map(([icon, label, href]) => (
+          <a
+            key={label}
+            href={href as string}
             style={{
-              position: "relative",
-              zIndex: 2,
-              maxWidth: 700,
-              width: "100%",
-              margin: "auto",
-              padding: "3.5rem 1.2rem",
-              display: "flex",
-              flexDirection: "column",
+              display: "inline-flex",
               alignItems: "center",
-              justifyContent: "center",
+              gap: 6,
+              padding: "8px 12px",
+              borderRadius: 999,
+              background: "#fff",
+              border: "1px solid rgba(24,77,50,0.18)",
+              color: "#184d32",
+              fontWeight: 700,
+              fontSize: 12,
+              textDecoration: "none",
             }}
           >
-            <ContactForm />
-          </div>
-        </section>
+            <span style={{ fontSize: 14 }}>{icon}</span>
+            <span>{label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {/* Your existing form stays exactly as-is */}
+    <ContactForm />
+
+    {/* Tiny reassurance line */}
+    <div
+      style={{
+        marginTop: 10,
+        fontSize: 12,
+        color: "#2d6a4f",
+      }}
+    >
+      We typically respond within 24 hours. Share product, grade, quantity & route for faster quotes.
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
 
         {/* Footer */}
         <footer
@@ -776,14 +1104,14 @@ export default function Home() {
         fontSize: "0.96rem"
       }}
     
-    >Designed By Fusionex</p>
+    >Designed By Fusionex.Labs</p>
   </div>
 </footer>
 
 
         {/* WhatsApp Chat Icon */}
         <a
-          href="https://wa.me/9321589961" // Replace with your WhatsApp number in international format
+          href="https://wa.me/+918591456683" // Replace with your WhatsApp number in international format
           target="_blank"
           rel="noopener noreferrer"
           title="Chat with us on WhatsApp"
@@ -804,7 +1132,7 @@ export default function Home() {
           }}
         >
           {/* WhatsApp SVG */}
-         <Image src="icons/apple.png" alt="WhatsApp Icon" style={{ width: 32, height: 32 }} />
+         <Image src="/icons/apple.png" alt="WhatsApp Icon" width={32} height={32} style={{ width: 32, height: 32 }} />
          
         </a>
 
@@ -825,7 +1153,7 @@ function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -852,120 +1180,256 @@ function ContactForm() {
 
   return (
     <form
-      style={{
-        width: "100%",
-        maxWidth: 400,
-        display: "flex",
-        flexDirection: "column",
-        gap: "1.15rem",
-        background: "rgba(255,255,255,0.93)",
-        borderRadius: 10,
-        padding: "2rem 1rem",
-        boxShadow: "0 4px 32px rgba(0,0,0,0.08)",
-        color: "#184d32",
-      }}
-      onSubmit={handleSubmit}
-    >
-      <h3
-        style={{
-          textAlign: "left",
-          fontWeight: 700,
-          marginBottom: "0.7rem",
-          fontSize: "1.3rem",
-          letterSpacing: "0.04em",
-          color: "#184d32",
-        }}
-      >
-        Get in Touch
-      </h3>
-      <input
-        type="text"
-        required
-        placeholder="Name"
-        name="name"
-        value={form.name}
-        onChange={handleChange}
-        style={{
-          padding: "0.8rem",
-          borderRadius: 6,
-          border: "none",
-          fontSize: "1rem",
-          background: "#eee",
-          outline: "none",
-        }}
-      />
-      <input
-        type="email"
-        required
-        placeholder="Email Address"
-        name="email"
-        value={form.email}
-        onChange={handleChange}
-        style={{
-          padding: "0.8rem",
-          borderRadius: 6,
-          border: "none",
-          fontSize: "1rem",
-          background: "#eee",
-          outline: "none",
-        }}
-      />
-      <input
-        type="tel"
-        required
-        placeholder="Contact Number"
-        name="phone"
-        pattern="[0-9+ -]*"
-        value={form.phone}
-        onChange={handleChange}
-        style={{
-          padding: "0.8rem",
-          borderRadius: 6,
-          border: "none",
-          fontSize: "1rem",
-          background: "#eee",
-          outline: "none",
-        }}
-      />
-      <input
-        type="text"
-        required
-        placeholder="Ask us anything..."
-        name="message"
-        value={form.message}
-        onChange={handleChange}
-        style={{
-          padding: "0.8rem",
-          borderRadius: 6,
-          border: "none",
-          fontSize: "1rem",
-          background: "#eee",
-          outline: "none",
-        }}
-      />
-      <button
-        type="submit"
-        disabled={loading}
-        style={{
-          padding: "0.85rem",
-          background: "#facc15",
-          color: "#1a1a1a",
-          fontWeight: 700,
-          fontSize: "1rem",
-          border: "none",
-          borderRadius: 6,
-          cursor: loading ? "not-allowed" : "pointer",
-          marginTop: "0.4rem",
-        }}
-      >
-        {loading ? "Submitting..." : "Submit"}
-      </button>
-      {success && (
-        <div style={{ color: "green", marginTop: 10 }}>Thank you! We&apos;ll contact you soon.</div>
-      )}
-      {error && (
-        <div style={{ color: "red", marginTop: 10 }}>{error}</div>
-      )}
-    </form>
+  className="contactCard"
+  onSubmit={handleSubmit}
+  style={{
+    width: "100%",
+    maxWidth: 520,
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+    borderRadius: 16,
+    padding: "1.75rem 1.25rem",
+    position: "relative",
+  }}
+>
+  {/* heading */}
+  <h3
+    style={{
+      textAlign: "left",
+      fontWeight: 800,
+      margin: 0,
+      fontSize: "1.35rem",
+      letterSpacing: "0.02em",
+      color: "#184d32",
+    }}
+  >
+    Get in Touch
+  </h3>
+  <div
+    style={{
+      height: 4,
+      width: 56,
+      borderRadius: 999,
+      background:
+        "linear-gradient(90deg, #b7f7cc 0%, #facc15 60%, #f59e0b 100%)",
+      marginBottom: "0.75rem",
+    }}
+  />
+
+  {/* Name */}
+  <label className="field">
+    <span className="label">Name</span>
+    <input
+      type="text"
+      required
+      placeholder="e.g., Rahul Sharma"
+      name="name"
+      value={form.name}
+      onChange={handleChange}
+      className="input"
+    />
+  </label>
+
+  {/* Email */}
+  <label className="field">
+    <span className="label">Email Address</span>
+    <input
+      type="email"
+      required
+      placeholder="you@company.com"
+      name="email"
+      value={form.email}
+      onChange={handleChange}
+      className="input"
+    />
+  </label>
+
+  {/* Phone */}
+  <label className="field">
+    <span className="label">Contact Number</span>
+    <input
+      type="tel"
+      required
+      placeholder="+91 98xxxxxxx"
+      name="phone"
+      pattern="[0-9+ -]*"
+      value={form.phone}
+      onChange={handleChange}
+      className="input"
+    />
+  </label>
+
+  {/* Message */}
+  <label className="field">
+    <span className="label">Message</span>
+    <textarea
+      required
+      placeholder="Ask us anything…"
+      name="message"
+      value={form.message}
+      onChange={handleChange}
+      rows={4}
+      className="textarea"
+    />
+  </label>
+
+  <button
+    type="submit"
+    disabled={loading}
+    className={`submit ${loading ? "isLoading" : ""}`}
+  >
+    {loading ? (
+      <>
+        <span className="spinner" />
+        Submitting…
+      </>
+    ) : (
+      "Submit"
+    )}
+  </button>
+
+  {success && (
+    <div className="alert success">Thank you! We&apos;ll contact you soon.</div>
+  )}
+  {error && <div className="alert error">{error}</div>}
+
+  {/* scoped styles */}
+  <style jsx>{`
+    .contactCard {
+      /* LOLO brand palette */
+      --brand-deep: #184d32;
+      --brand-mid: #2d6a4f;
+      --brand-foam: #f6fff9;
+      --brand-mint: #eaf7ef;
+      --accent-lime: #b7f7cc;
+      --accent-mango: #facc15;
+      --accent-orange: #f59e0b;
+
+      /* gradient border using dual backgrounds */
+      background:
+        linear-gradient(180deg, #ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, var(--accent-lime), var(--accent-mango))
+          border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--brand-mid);
+      letter-spacing: 0.02em;
+    }
+
+    .input,
+    .textarea {
+      width: 100%;
+      padding: 0.9rem 0.95rem;
+      border-radius: 12px;
+      border: 1px solid rgba(24, 77, 50, 0.18);
+      background: linear-gradient(180deg, var(--brand-foam), #ffffff);
+      font-size: 1rem;
+      outline: none;
+      transition: box-shadow 160ms ease, border-color 160ms ease,
+        background 160ms ease, transform 120ms ease;
+      color: #0f2018;
+    }
+    .textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .input::placeholder,
+    .textarea::placeholder {
+      color: #6b8f7c;
+    }
+    .input:hover,
+    .textarea:hover {
+      transform: translateY(-1px);
+    }
+    .input:focus,
+    .textarea:focus {
+      border-color: var(--brand-mid);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.12);
+    }
+
+    .submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0.95rem 1rem;
+      background: linear-gradient(
+        90deg,
+        #ffe08a 0%,
+        var(--accent-mango) 55%,
+        var(--accent-orange) 100%
+      );
+      color: #0f172a;
+      font-weight: 900;
+      font-size: 1rem;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      margin-top: 0.25rem;
+      transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+      box-shadow: 0 12px 26px rgba(250, 204, 21, 0.28);
+    }
+    .submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(250, 204, 21, 0.35);
+      filter: brightness(1.02);
+    }
+    .submit:active {
+      transform: translateY(0);
+    }
+    .submit:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+      box-shadow: none;
+      filter: none;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid rgba(15, 23, 42, 0.25);
+      border-top-color: #0f172a;
+      animation: spin 0.8s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .alert {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .alert.success {
+      color: #0f5132;
+      background: #d1f2e0;
+      border: 1px solid #9be0c0;
+    }
+    .alert.error {
+      color: #842029;
+      background: #f8d7da;
+      border: 1px solid #f1aeb5;
+    }
+  `}</style>
+</form>
+
   );
 }
